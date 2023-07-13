@@ -1,0 +1,41 @@
+FUNCTIONS
+Mutable arguments
+    *a veces necesitaremos que un argumento sea de un tipo X
+'''
+def createStudent(name, age, grades=[]):
+    return {
+        'name': name,
+        'age': age,
+        'grades': grades
+    }
+'''
+    * en este caso, grades es una lista.
+
+A mutable object refers to various containers in Python that are intended to be changed.
+    A list has remove(), append()...
+    Sets and dictionaries can be changed too.
+
+Not mutable: int, float, tuple and strings:
+    operations with strings return a new string, not modify the current one.
+
+*****
+def addGrade(student, grade):
+    student['grades'].append(grade)
+    # To help visualize the grades we have added a print statement
+    print(student['grades'])
+chrisley = createStudent('Chrisley', 15)
+dallas = createStudent('Dallas', 16)
+addGrade(chrisley, 90)--> Output: [90]
+addGrade(dallas, 100)--> Output: [90, 100]
+*****
+
+THE NONE WORKAROUND
+def createStudent(name, age, grades=None):
+  if grades is None:
+    grades = []
+  return {
+    'name': name,
+    'age': age,
+    'grades': grades
+  }
+    ** This solves that problem.
