@@ -39,3 +39,19 @@ def createStudent(name, age, grades=None):
     'grades': grades
   }
     ** This solves that problem.
+
+------------------------------------
+Variable number of arguments: *args
+------------------------------------
+def my_function(*args):
+  print(args)
+
+------------------------------------
+Variable number of arguments: **kwargs
+------------------------------------
+
+
+
+
+
+
